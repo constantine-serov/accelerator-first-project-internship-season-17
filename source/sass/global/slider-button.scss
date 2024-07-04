@@ -1,0 +1,31 @@
+.slider-button {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  color: $title-base;
+
+  &--left {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    color: $footer-policy-hover;
+  }
+
+  &:focus-visible {
+    // color: $hover-button;
+    background-color: $bg-second;
+  }
+
+  &:active {
+    color: $footer-policy-hover;
+    background-color: $bg-second;
+  }
+
+  &:disabled {
+    color: $text-disabled;
+  }
+}

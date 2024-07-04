@@ -1,0 +1,75 @@
+.page-body {
+  font-family: "Manrope", sans-serif;
+  color: $text-base;
+  background-color: $bg-base;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    transition: all 0.4s;
+  }
+
+  &--popup-open {
+    overflow: hidden;
+  }
+}
+
+.page-body--menu-open {
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(13, 29, 51, 0.4);
+    z-index: 2;
+  }
+}
+
+.page-body__container {
+  position: relative;
+  overflow: hidden;
+
+  @media (width <= 767px) {
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  @media (width >= 768px) and (width <= 1439px) {
+    width: 678px;
+    margin: 0 auto;
+  }
+
+  @media (width >= 1440px) {
+    width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+.page-body__container--tablet-slider {
+  @media (width >= 768px) and (width <= 1439px) {
+    width: 678px + 45px;
+    margin: 0 auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

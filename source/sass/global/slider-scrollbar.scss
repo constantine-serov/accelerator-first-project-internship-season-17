@@ -1,0 +1,10 @@
+.swiper-scrollbar {
+  margin: 10px 0;
+  background-color: $scrollbar;
+  flex-grow: 1;
+}
+
+.swiper-scrollbar .swiper-scrollbar-drag {
+  height: 2px;
+  background-color: $bg-accent;
+}
